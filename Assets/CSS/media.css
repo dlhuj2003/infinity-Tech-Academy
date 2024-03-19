@@ -1,0 +1,533 @@
+/* small screen media query */
+@media screen and (width <= 355px) {
+  .courses {
+    padding: 40px 10px;
+
+    .courseGrid {
+      .box {
+        .courseOutline {
+          .name {
+            font-size: 14px;
+          }
+          .price{
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (width <= 450px) {
+  .thumbNail {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .testimonial {
+    .header {
+      & h2 {
+        width: 90%;
+      }
+    }
+  }
+}
+@media screen and (width >=500px) {
+  .footer {
+    .smallScreen {
+      display: none;
+    }
+  }
+}
+@media screen and (width <=500px) {
+  .navBar {
+    .smallScreenImg {
+      display: block;
+    }
+    .bigScreenImg {
+      display: none;
+    }
+  }
+  .slider {
+    .list {
+      .item {
+        .content {
+          & p {
+            line-height: 1.2;
+          }
+        }
+      }
+    }
+  }
+  .arrows {
+    display: initial;
+    top: 80%;
+    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+  }
+  .thumbNail {
+    display: none;
+  }
+  .footer {
+    .bigScreen {
+      display: none;
+    }
+  }
+}
+@media screen and (width >= 500px) {
+  .mainBox {
+    height: 135vh;
+    .content {
+      height: 60vh;
+    }
+
+    .contentGrid {
+      top: 36%;
+    }
+  }
+  .weBox {
+    .weVideo {
+      width: 60%;
+    }
+  }
+}
+
+@media screen and (width <= 600px) {
+  .testimonial {
+    .header {
+      margin-bottom: 60px;
+      & p {
+        font-size: 20px;
+      }
+      & h2 {
+        font-size: 25px;
+      }
+    }
+    .comments {
+      height: 125vh;
+      .comment {
+        grid-template-columns: 1fr;
+        height: 20rem;
+      }
+    }
+  }
+}
+
+@media screen and (width >= 700px) {
+  .mainBox {
+    height: 135vh;
+    .contentGrid {
+      top: 35%;
+      grid-template-columns: repeat(3, 1fr);
+      width: 95%;
+      .gridBox {
+        height: 15rem;
+      }
+    }
+  }
+
+  .courses {
+    .courseGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .weDo {
+    & p {
+      width: 90%;
+      margin: auto auto 60px auto;
+    }
+    .weDoGrid {
+      .box {
+        height: 15rem;
+      }
+    }
+  }
+  .weBox {
+    height: 80vh;
+    .weContent {
+      & h2 {
+        width: 70%;
+      }
+      & p:last-child {
+        width: 70%;
+      }
+    }
+    .weVideo {
+      width: 50%;
+      top: 60%;
+      height: 10rem;
+    }
+  }
+}
+
+@media screen and (width <= 750px) {
+  .navBar {
+    .navLinks {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      background: #333;
+      display: none;
+      padding: 20px 0;
+
+      & ul {
+        & li {
+          width: 100%;
+          & a {
+            color: #fff;
+          }
+
+          & ul {
+            position: relative;
+            width: 100%;
+            z-index: 1000;
+            & li {
+              background: #fff;
+
+              & a {
+                color: #000;
+              }
+            }
+          }
+        }
+      }
+    }
+    .label {
+      display: initial;
+    }
+    #hamburgerMenu:checked ~ .navLinks {
+      display: initial;
+    }
+  }
+}
+@media screen and (width >= 800px) {
+  .values {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    .item {
+      height: 25rem;
+    }
+  }
+  .ourVision {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 40px;
+    .item1 {
+      order: 2;
+    }
+  }
+
+  .mission {
+    .item2 {
+      order: 1;
+    }
+  }
+
+  .thanks {
+    height: 20rem;
+    .content {
+      & h1 {
+        font-size: 30px;
+      }
+
+      & p {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+@media screen and (width <= 900px) {
+  .navBar {
+    padding: 20px;
+    .bigScreenImg {
+      height: 40px;
+    }
+  }
+
+  .slider {
+    margin-top: 90px;
+  }
+  .footer {
+    .bigScreen {
+      .item {
+        &:first-child {
+          grid-column: 1/3;
+          grid-row: 1;
+        }
+        &:last-child {
+          grid-column: 1/3;
+          grid-row: 2;
+        }
+      }
+    }
+  }
+
+  .testimonial {
+    .header {
+      & h2 {
+        width: 75%;
+      }
+    }
+    .comments {
+      width: 100%;
+      background: transparent;
+      .comment {
+        width: 90%;
+      }
+    }
+  }
+}
+@media screen and (width >= 901px) {
+  .courses {
+    .courseGrid {
+      grid-template-columns: repeat(3, 1fr);
+      .box {
+        .courseOutline {
+          padding: 0 5px;
+        }
+      }
+    }
+  }
+  .weDo {
+    & p {
+      width: 70%;
+    }
+    .weDoGrid {
+      .box {
+        height: 18rem;
+      }
+    }
+  }
+
+  .footer {
+    .bigScreen {
+      grid-template-columns: repeat(2, 1fr);
+      .item2 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+    }
+  }
+}
+
+@media screen and (width <= 1080px) {
+  .courses {
+    padding: 70px 30px;
+  }
+
+  .testimonial {
+    .comments {
+      .comment {
+        width: 80%;
+      }
+    }
+  }
+}
+@media screen and (width >= 1080px) {
+  .mainBox {
+    .content {
+      & h2 {
+        font-size: 30px;
+      }
+      & p {
+        font-size: 20px;
+        width: 60%;
+      }
+    }
+  }
+  .courses {
+    padding: 70px 100px;
+  }
+  .weDo {
+    padding: 20px 100px;
+    .weDoGrid {
+      .box {
+        height: 20rem;
+      }
+    }
+  }
+  .values {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .slider {
+    height: 80vh;
+    .list {
+      .item {
+        .content {
+          position: absolute;
+          left: 5%;
+          top: 20%;
+          width: 100%;
+          max-width: 80%;
+
+          & h1 {
+            font-size: 35px;
+          }
+          & p {
+            font-size: 25px;
+          }
+        }
+      }
+    }
+    .thumbNail {
+      padding: 70px 30px;
+      left: 5%;
+      bottom: 50px;
+      .item {
+        width: 150px;
+        height: 100px;
+      }
+    }
+  }
+}
+
+@media screen and (width <= 1309px) {
+  .courses {
+    .courseGrid {
+      .box {
+        .hoveredSeemore {
+          top: 80%;
+          .btn {
+            padding: 8px 12px;
+            & i {
+              margin-left: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (width >= 1310px) {
+  .mainBox {
+    height: 160vh;
+    .content {
+      height: 75vh;
+
+      & h2 {
+        font-size: 50px;
+      }
+      & p {
+        font-size: 25px;
+      }
+    }
+    .contentGrid {
+      width: 80%;
+      top: 40%;
+      .gridBox {
+        height: 20rem;
+      }
+    }
+  }
+  .weDo {
+    padding: 20px 150px;
+
+    & h2 {
+      font-size: 40px;
+    }
+    & p {
+      font-size: 25px;
+      width: 80%;
+    }
+    .weDoGrid {
+      .box {
+        height: 30rem;
+      }
+    }
+  }
+  .courses {
+    & h2 {
+      font-size: 30px;
+    }
+    & p {
+      font-size: 20px;
+      width: 50%;
+      line-height: 1.3;
+    }
+    .courseGrid {
+      .box {
+        height: 25rem;
+        .courseOutline {
+          padding: 0 20px;
+
+          .price {
+            padding-right: 15px;
+          }
+        }
+      }
+    }
+    .outerSeeMore {
+      margin-top: 25px;
+    }
+  }
+  .weBox {
+    height: 85vh;
+    .weContent {
+      height: 60vh;
+      & h2 {
+        width: 50%;
+        font-size: 30px;
+      }
+      & p:first-child {
+        font-size: 20px;
+      }
+      & p:last-child {
+        width: 50%;
+        font-size: 25px;
+      }
+    }
+    .weVideo {
+      width: 40%;
+      top: 60%;
+      height: 14rem;
+    }
+  }
+  .ourVision {
+    padding: 0 80px;
+    margin-top: 100px;
+  }
+  .valuesHeader {
+    margin: 100px 0 50px 0;
+    & h2 {
+      font-size: 30px;
+    }
+  }
+  .values {
+    padding: 0 80px;
+    .item {
+      .title {
+        & h3 {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+  .thanks {
+    .content {
+      width: 70%;
+      margin: auto 100px auto auto;
+      & h1 {
+        font-size: 40px;
+      }
+      & p {
+        font-size: 20px;
+      }
+    }
+  }
+  .footer {
+    margin-top: 100px;
+    padding: 40px;
+  }
+}
