@@ -54,11 +54,13 @@ body {
 
       & ul {
         position: absolute;
-        left: 0%;
+        left:50%;
+        transform: translateX(-50%);
         right: 0%;
-        width: 300px;
+        width: 400px;
         background: #eee;
         display: none;
+        margin: 0 auto;
 
         & li {
           width: 100%;

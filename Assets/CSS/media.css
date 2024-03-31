@@ -9,7 +9,7 @@
           .name {
             font-size: 14px;
           }
-          .price{
+          .price {
             font-size: 14px;
           }
         }
@@ -187,6 +187,8 @@
             position: relative;
             width: 100%;
             z-index: 1000;
+            left: 0;
+            transform: translateX(0);
             & li {
               background: #fff;
 
@@ -250,6 +252,21 @@
     padding: 20px;
     .bigScreenImg {
       height: 40px;
+    }
+    .navLinks {
+      & ul {
+        & li {
+          & ul {
+            margin: auto;
+            width: 700px;
+            & li {
+              & a {
+                color: #000;
+              }
+            }
+          }
+        }
+      }
     }
   }
 
