@@ -1,4 +1,9 @@
+// menu toggle
+let menuOpen = document.getElementById("menuOpen");
 
+function openNav() {
+  menuOpen.classList.toggle("fa-times");
+}
 // about page slider
 let items = document.querySelectorAll(".slider .list .item");
 let thumnails = document.querySelectorAll(".thumbNail .item");
