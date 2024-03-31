@@ -656,11 +656,13 @@ body {
     & h2 {
       margin-bottom: 20px;
       color: #1b1a59;
+      font-size: 30px;
     }
 
     & p {
       margin-bottom: 20px;
       color: #5c5c5c;
+      font-size: 20px;
     }
 
     & img {
