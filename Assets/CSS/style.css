@@ -788,6 +788,9 @@ body {
             margin-right: 10px;
             font-size: 20px;
           }
+          & a{
+            color: #2947a9;
+          }
         }
       }
       .iconBox {
@@ -828,6 +831,10 @@ body {
           font-size: 20px;
           color: #2947a9;
           font-weight: 600;
+        
+        }
+        & a{
+          color: #2947a9;
         }
       }
     }
