@@ -291,12 +291,14 @@ body {
           width: 100%;
           object-fit: cover;
           transition: 0.5s;
+        
         }
       }
 
       &:hover img {
         transform: scale(1.5) rotate(10deg);
         transition: 0.5s;
+        filter: grayscale(70%);
       }
 
       .courseOutline {
