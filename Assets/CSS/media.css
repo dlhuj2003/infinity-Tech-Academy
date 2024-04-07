@@ -1,4 +1,7 @@
 /* small screen media query */
+@media screen and (width <= 350px) {
+
+}
 @media screen and (width <= 355px) {
   .courses {
     padding: 40px 10px;
