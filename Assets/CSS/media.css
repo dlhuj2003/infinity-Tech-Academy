@@ -40,6 +40,9 @@
     .weContent {
       text-align: start;
       justify-content: center;
+      & p{
+        font-size: 18px;
+      }
     }
     .weVideo {
       width: 100%;
@@ -51,6 +54,7 @@
     }
     & p {
       text-align: start;
+      font-size: 18px;
     }
   }
   .courses {
@@ -231,7 +235,7 @@
       top: 100%;
       left: 0;
       right: 0;
-      height: 100vh;
+      /* height: 50vh; */
 
       background: #1b1a59;
       height: 0;
@@ -270,6 +274,7 @@
     }
     #hamburgerMenu:checked ~ .navLinks {
       height: 100vh;
+      overflow: auto;
       pointer-events: initial;
       transition: height 0.5s ease-in-out;
     }
