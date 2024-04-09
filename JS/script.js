@@ -1,3 +1,8 @@
+// navbar toggle mode
+window.addEventListener("scroll", () => {
+  let nav = document.querySelector(".navBar");
+  nav.classList.toggle("newNav", window.scrollY > 500); 
+});
 // menu toggle
 let menuOpen = document.getElementById("menuOpen");
 
@@ -27,12 +32,11 @@ prev.onclick = function () {
     itemActive = countItem - 1;
   }
   shoowSlider();
-}
+};
 
 let refreshInterval = setInterval(() => {
   next.click();
-
-}, 3000)
+}, 3000);
 function shoowSlider() {
   let ItemActiveOld = document.querySelector(".slider .list .item.active");
   let thumbNailActiveOld = document.querySelector(".thumbNail .item.active");
@@ -43,10 +47,9 @@ function shoowSlider() {
   thumnails[itemActive].classList.add("active");
 }
 clearInterval(refreshInterval);
- refreshInterval = setInterval(() => {
+refreshInterval = setInterval(() => {
   next.click();
-
-}, 5000)
+}, 5000);
 
 thumnails.forEach((thumbnail, index) => {
   thumbnail.addEventListener("click", () => {

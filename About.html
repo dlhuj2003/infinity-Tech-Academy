@@ -32,19 +32,38 @@
     <input type="checkbox" id="hamburgerMenu">
     <label for="hamburgerMenu" class="label"><i class="fa fa-bars" id="menuOpen" onclick="openNav()"></i></label>
 
+    
     <div class="navLinks">
       <ul>
         <li><a href="index.html">home</a></li>
-        <li><a href="About.html">about us</a></li>
-        <li><a href="javascript:void(0)">services <i class="fa fa-caret-down"></i></a>
+        <li class="activeLink"><a href="About.html" target="_blank">about us</a></li>
+        <li>
+          <a href="#;" id=key onclick="func(0)">services </a>
           <ul>
-            <li><a href="javascript:void(0)"> ICT Training </a></li>
-            <li><a href="javascript:void(0)">Computer Sales & accessories</a></li>
-            <li><a href="javascript:void(0)">Computer repairs & maintenance</a></li>
-            <li><a href="javascript:void(0)">CCTV equipment & installation</a></li>
+            <li><a href="javascript:void(0)"> ICT Training </a>
+              <ul>
+                <li><a href="">Basic Software Training </a></li>
+                <li><a href="">Professional Software Training </a></li>
+              </ul>
+            </li>
+            <li><a href="javascript:void(0)">Computer Sales & accessories</a>
+              <ul>
+                <li><a href="#"> Laptops </a></li>
+                <li><a href="#">Computer Accessories</a></li>
+                <li><a href="#"> Office Equipment </a></li>
+              </ul>
+            </li>
+            <li><a href="javascript:void(0)">Computer repairs & maintenance</a>
+              <ul>
+                <li><a href="#">Diagnosis and Repair</a></li>
+                <li><a href="#">Expertise Across Brands</a></li>
+                <li><a href="#">Data Recovery</a></li>
+              </ul>
+            </li>
+            <li><a href="#">CCTV equipment & installation</a></li>
           </ul>
         </li>
-        <li><a href="javascript:void(0)" target="_blank">contact</a></li>
+        <li><a href="#">contact</a></li>
       </ul>
     </div>
   </nav>
@@ -250,7 +269,7 @@
   <div class="thanks">
     <div class="content">
       <h1>We at Infinity Tech-World</h1>
-      <p>we believe that technology has the power to transform lives and connect individuals across borders. We are here to empower you on your digital journey, one step at a time.</p>
+      <p> believe that technology has the power to transform lives and connect individuals across borders. We are here to empower you on your digital journey, one step at a time.</p>
     </div>
   </div>
 
@@ -258,71 +277,88 @@
   <!-- footer -->
 
   <footer class="footer">
-    <div class="smallScreen">
-      <div class="item">
-        <div class="content">
-          <h2>Head Office</h2>
-          <p>No 119 Ziks Avenue Opp. Dike Park Awka
-          </p>
-          <p><span>Branch Office :</span> No 1 Secretariat Rd, Aroma Junction Awka Anambra state.</p>
-        </div>
-      </div>
-      <div class="item">
-        <div class="content">
-          <h2>Contact</h2>
-          <p><span>Phone: </span>+234 802 960 4117, +234 8064 380 018 </p>
-          <p><span>Email:</span> <a href="mailto:infinitytechworldofficial@gmail.com"
-              target="_blank">infinitytechworldofficial@gmail.com</a>
-        </div>
-
-        <div class="iconBox">
-          <div class="icon">
-            <a href="https://instagram.com/infinitytechworld.com"> <i class="fab fa-instagram"
-                target="_blank"></i></a>
-          </div>
-          <div class="icon">
-            <a href="http://www.facebook.com/InfinityTechWorldltd"> <i class="fab fa-facebook" target="_blank"></i></a>
-          </div>
-          <div class="icon">
-            <a href="http://www.twitter.com/infinitytechW"> <i class="fab fa-twitter" target="_blank"></i></a>
-          </div>
-          <div class="icon">
-            <a href="http://www.youtube.com/results?search_query=infinity+tech+world" target="_blank"> <i
-                class="fab fa-youtube"></i></a>
-          </div>
-        </div>
-      </div>
+   
+    <div class="gridContainer">
+     <div class="boxItem item1">
+       <div class="heading">
+         <div class="logo">
+           <a href="#">
+             <img src="Assets/image/logo.png" alt="logo" height="40px">
+           </a>
+         </div>
+       </div>
+       <div class="content">
+         <p>
+           We are Infinity Tech-World, a team of dedicated professionals committed to delivering creative software solutions with
+           unwavering efficiency.
+         </p>
+ 
+         <div class="socials">
+           <div class="iconBox">
+             <a href="https://instagram.com/infinitytechworld.com"> <i class="fab fa-instagram"
+               target="_blank"></i></a>
+           </div>
+           <div class="iconBox">
+             <a href="http://www.facebook.com/InfinityTechWorldltd" target="_blank"> <i class="fab fa-facebook"></i></a>
+           </div>
+           <div class="iconBox">
+             <a href="http://www.twitter.com/infinitytechW"> <i class="fab fa-twitter" target="_blank"></i></a>
+           </div>
+           <div class="iconBox">
+             <a href="http://www.youtube.com/results?search_query=infinity+tech+world" target="_blank"> <i
+               class="fab fa-youtube"></i></a>
+           </div>
+         </div>
+       </div>
+     </div>
+     <div class="boxItem item2">
+       <div class="heading">
+         <h3>useful links</h3>
+       </div>
+       <div class="content">
+         <ul>
+           <li><a href="index.html">Home</a></li>
+           <li><a href="About.html">about us</a></li>
+           <li><a href="#">contact</a></li>
+ 
+         </ul>
+       </div>
+     </div>
+     <div class="boxItem item3">
+       <div class="heading">
+         <h3>our services</h3>
+       </div>
+       <div class="content">
+         <ul>
+           <li><a href="#">ICT Training</a></li>
+           <li><a href="#">Computer Sales & accessories</a></li>
+           <li><a href="#">Computer repairs & maintenance</a></li>
+           <li><a href="#">CCTV equipment & installation</a></li>
+         </ul>
+       </div>
+     </div>
+     <div class="boxItem item4">
+       <div class="heading">
+         <h3>contact information</h3>
+       </div>
+       <div class="content">
+         <ul>
+           <li><i class="fa fa-phone-volume"></i>+234 802 960 4117</li>
+           <li> <i class="fa fa-phone-volume"></i>+234 8064 380 018</li>
+           <li class="email"><i class="fa fa-envelope"></i><a href="mailto:infinitytechworldofficial@gmail.com"
+             target="_blank">infinitytechworldofficial@gmail.com</a></li>
+           
+           <li><i class="fa fa-location-dot"></i>No 1 Secretariat Rd, Aroma Junction Awka Anambra state (Head Office)</li>
+           <li><i class="fa fa-location-dot"></i>No 119 Ziks Avenue Opp. Dike Park Awka (Branch Office)</li>
+           <li></li>
+         </ul>
+       </div>
+     </div>
     </div>
-    </div>
-    <div class="bigScreen">
-      <div class="item">
-        <p><span>Head Office: </span>No 119 Ziks Avenue Opp. Dike Park Awka</p>
-        <p><span>Branch Office:</span> No 1 Secretariat Rd, Aroma Junction Awka Anambra state.</p>
-        <p><span>Phone: </span>+234 802 960 4117, +234 8064 380 018 </p>
-        <p><span>Email:</span> <a href="mailto:infinitytechworldofficial@gmail.com"
-            target="_blank">infinitytechworldofficial@gmail.com</a></p>
-      </div>
-      <div class="item item2">
-        <p><span>Social:</span></p>
-        <div class="iconBox">
-          <div class="icon">
-            <a href="https://instagram.com/infinitytechworld.com"> <i class="fab fa-instagram"
-                target="_blank"></i></a>
-          </div>
-          <div class="icon">
-            <a href="http://www.facebook.com/InfinityTechWorldltd"> <i class="fab fa-facebook" target="_blank"></i></a>
-          </div>
-          <div class="icon">
-            <a href="http://www.twitter.com/infinitytechW"> <i class="fab fa-twitter" target="_blank"></i></a>
-          </div>
-          <div class="icon">
-            <a href="http://www.youtube.com/results?search_query=infinity+tech+world" target="_blank"> <i
-                class="fab fa-youtube"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
+     <div class="allRights">
+      <p>&copy Copyrights <span><script>document.write( new Date().getFullYear() );</script></span> infinity-techworld All rights reserved.</p>
+     </div>
+   </footer>
 
 
   <script src="JS/script.js"></script>

@@ -1,7 +1,5 @@
 /* small screen media query */
-@media screen and (width <= 350px) {
 
-}
 @media screen and (width <= 355px) {
   .courses {
     padding: 40px 10px;
@@ -19,9 +17,63 @@
       }
     }
   }
+  .footer {
+    .gridContainer {
+      padding: 5px;
+    }
+  }
+}
+@media screen and (width <=400px) {
+  .mainBox {
+    .content {
+      text-align: start;
+
+      & h2 {
+        width: 100%;
+      }
+      & p {
+        width: 100%;
+      }
+    }
+  }
+  .weBox {
+    .weContent {
+      text-align: start;
+      justify-content: center;
+    }
+    .weVideo {
+      width: 100%;
+    }
+  }
+  .weDo {
+    & h2 {
+      text-align: start;
+    }
+    & p {
+      text-align: start;
+    }
+  }
+  .courses {
+    & h2 {
+      text-align: start;
+    }
+  }
+  .testimonial {
+    .header {
+      & p {
+        width: 100%;
+        text-align: start;
+      }
+    }
+  }
 }
 
 @media screen and (width <= 450px) {
+  .mainBox {
+    .contentGrid {
+      grid-template-columns: 1fr;
+    }
+  }
   .thumbNail {
     left: 50%;
     transform: translateX(-50%);
@@ -34,13 +86,7 @@
     }
   }
 }
-@media screen and (width >=500px) {
-  .footer {
-    .smallScreen {
-      display: none;
-    }
-  }
-}
+
 @media screen and (width <=500px) {
   .navBar {
     .smallScreenImg {
@@ -51,6 +97,7 @@
     }
   }
   .slider {
+    margin-bottom: 30px;
     .list {
       .item {
         .content {
@@ -73,23 +120,33 @@
   .thumbNail {
     display: none;
   }
-  .footer {
-    .bigScreen {
-      display: none;
+
+  .ourVision {
+    .visionItem {
+      padding: 0;
+      .visionContent {
+        padding: 15px;
+        & h2 {
+          font-size: 25px;
+        }
+        & p {
+          font-size: 18px;
+        }
+      }
+
+      & ul {
+        & li {
+          list-style-type: none;
+          font-size: 16px;
+        }
+      }
     }
+  }
+  .valuesHeader {
+    padding: 0 15px;
   }
 }
 @media screen and (width >= 500px) {
-  .mainBox {
-    height: 135vh;
-    .content {
-      height: 60vh;
-    }
-
-    .contentGrid {
-      top: 36%;
-    }
-  }
   .weBox {
     .weVideo {
       width: 60%;
@@ -97,6 +154,16 @@
   }
 }
 
+@media screen and (width < 540px) {
+  .weDo {
+    .weDoGrid {
+      gap: 20px;
+      .box {
+        height: 15rem;
+      }
+    }
+  }
+}
 @media screen and (width <= 600px) {
   .testimonial {
     .header {
@@ -120,14 +187,8 @@
 
 @media screen and (width >= 700px) {
   .mainBox {
-    height: 135vh;
     .contentGrid {
-      top: 35%;
       grid-template-columns: repeat(3, 1fr);
-      width: 95%;
-      .gridBox {
-        height: 15rem;
-      }
     }
   }
 
@@ -139,7 +200,7 @@
 
   .weDo {
     & p {
-      width: 90%;
+      width: 100%;
       margin: auto auto 60px auto;
     }
     .weDoGrid {
@@ -152,10 +213,7 @@
     height: 80vh;
     .weContent {
       & h2 {
-        width: 70%;
-      }
-      & p:last-child {
-        width: 70%;
+        width: 100%;
       }
     }
     .weVideo {
@@ -174,12 +232,16 @@
       left: 0;
       right: 0;
       height: 100vh;
-      border-top: 1px solid rgba(0, 0, 0, 0.1);
-      background: #333;
-      display: none;
-      padding: 20px 0;
+
+      background: #1b1a59;
+      height: 0;
+      overflow: hidden;
+
+      pointer-events: none;
+      transition: height 0.5s ease-in-out;
 
       & ul {
+        padding: 30px 0;
         & li {
           width: 100%;
           & a {
@@ -207,7 +269,9 @@
       display: initial;
     }
     #hamburgerMenu:checked ~ .navLinks {
-      display: initial;
+      height: 100vh;
+      pointer-events: initial;
+      transition: height 0.5s ease-in-out;
     }
   }
 }
@@ -223,11 +287,8 @@
   }
   .ourVision {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     margin-bottom: 40px;
-    .item1 {
-      order: 2;
-    }
   }
 
   .mission {
@@ -262,30 +323,27 @@
           & ul {
             margin: auto;
             width: 700px;
+
             & li {
               & a {
                 color: #000;
               }
+              & ul {
+                position: relative;
+                left: 0;
+                & li {
+                  background: #f2f5f7;
+                  width: 100%;
+                  & a {
+                    color: #fff;
+                  }
+                }
+              }
+              &:hover > ul {
+                animation: none;
+              }
             }
           }
-        }
-      }
-    }
-  }
-
-  .slider {
-    margin-top: 90px;
-  }
-  .footer {
-    .bigScreen {
-      .item {
-        &:first-child {
-          grid-column: 1/3;
-          grid-row: 1;
-        }
-        &:last-child {
-          grid-column: 1/3;
-          grid-row: 2;
         }
       }
     }
@@ -306,6 +364,7 @@
     }
   }
 }
+
 @media screen and (width >= 901px) {
   .courses {
     .courseGrid {
@@ -317,9 +376,16 @@
       }
     }
   }
+  .weBox {
+    .weContent {
+      & p {
+        width: 80%;
+      }
+    }
+  }
   .weDo {
     & p {
-      width: 70%;
+      width: 90%;
     }
     .weDoGrid {
       .box {
@@ -327,19 +393,25 @@
       }
     }
   }
+}
 
-  .footer {
-    .bigScreen {
-      grid-template-columns: repeat(2, 1fr);
-      .item2 {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
+@media screen and (width >= 960px) {
+  .ourVision {
+    .item1 {
+      order: 2;
+    }
+    .visionItem {
+      & p {
+        font-size: 20px;
+      }
+      & ul {
+        & li {
+          font-size: 18px;
+        }
       }
     }
   }
 }
-
 @media screen and (width <= 1080px) {
   .courses {
     padding: 70px 30px;
@@ -351,6 +423,9 @@
         width: 80%;
       }
     }
+  }
+  .slider {
+    margin-top: 80px;
   }
 }
 @media screen and (width >= 1080px) {
@@ -414,6 +489,11 @@
 }
 
 @media screen and (width <= 1309px) {
+  .mainBox {
+    .content {
+      height: 50vh;
+    }
+  }
   .courses {
     .courseGrid {
       .box {
@@ -433,7 +513,6 @@
 
 @media screen and (width >= 1310px) {
   .mainBox {
-    height: 160vh;
     .content {
       height: 75vh;
 
@@ -456,18 +535,18 @@
     padding: 20px 150px;
 
     & h2 {
-      font-size: 40px;
+      font-size: 30px;
     }
     & p {
-      font-size: 25px;
-      width: 80%;
+      font-size: 20px;
     }
     .weDoGrid {
       .box {
-        height: 30rem;
+        height: 20rem;
       }
     }
   }
+
   .courses {
     & h2 {
       font-size: 30px;
@@ -494,31 +573,37 @@
     }
   }
   .weBox {
-    height: 85vh;
     .weContent {
-      height: 60vh;
       & h2 {
         width: 50%;
         font-size: 30px;
       }
-      & p:first-child {
-        font-size: 20px;
-      }
-      & p:last-child {
-        width: 50%;
+      & p {
         font-size: 25px;
+        width: 80%;
       }
     }
     .weVideo {
       width: 40%;
-      top: 60%;
+      /* top: 60%; */
       height: 14rem;
     }
   }
   .ourVision {
     padding: 0 80px;
     margin-top: 100px;
+    .visionItem {
+      & p {
+        font-size: 25px;
+      }
+      & ul {
+        & li {
+          font-size: 20px;
+        }
+      }
+    }
   }
+
   .valuesHeader {
     margin: 100px 0 50px 0;
     & h2 {
@@ -546,9 +631,5 @@
         font-size: 20px;
       }
     }
-  }
-  .footer {
-    margin-top: 100px;
-    padding: 40px;
   }
 }
