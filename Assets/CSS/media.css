@@ -517,7 +517,7 @@
       height: 75vh;
 
       & h2 {
-        font-size: 50px;
+        font-size: 40px;
       }
       & p {
         font-size: 25px;
@@ -538,7 +538,7 @@
       font-size: 30px;
     }
     & p {
-      font-size: 20px;
+      font-size: 25px;
     }
     .weDoGrid {
       .box {
