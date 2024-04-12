@@ -5,7 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home</title>
-
+  <!-- scroll reveal link -->
+  <script src="https://unpkg.com/scrollreveal"></script>
   <!-- custom css link -->
   <link rel="stylesheet" href="Assets/CSS/style.css" />
   <!-- media query -->
@@ -13,87 +14,156 @@
   <!-- fontawesome icon link -->
   <link rel="stylesheet" href="Assets/iconLibrary/all.min.css" />
   <link rel="stylesheet" href="Assets/iconLibrary/fontawesome.min.css" />
+
 </head>
 
 <body>
-  <!-- nav -->
-  <nav class="navBar">
-    <a href="index.html" class="logo">
-      <img src="Assets/image/png-2.png" alt="logo" class="smallScreenImg" />
-      <img src="Assets/image/logo.png" alt="logo" class="bigScreenImg" />
-    </a>
+  <!-- navBig screen -->
+  <div class="bigscreenNav" id="bigscreenNav">
+    <div class="logo">
+      <a href="index.html">
+        <img src="Assets/image/logo.png" alt="logo" height="40px">
+      </a>
 
-    <input type="checkbox" id="hamburgerMenu" />
-    <label for="hamburgerMenu" class="label"><i class="fa fa-bars" id="menuOpen" onclick="openNav()"></i></label>
-
-    <div class="navLinks">
-      <ul>
-        <li class="activeLink"><a href="index.html">home</a></li>
-        <li><a href="About.html" target="_blank">about us</a></li>
-        <li>
-          <a href="#;" id=key onclick="func(0)">services </a>
-          <ul>
-            <li><a href="javascript:void(0)"> ICT Training </a>
-              <ul>
-                <li><a href="">Basic Software Training </a></li>
-                <li><a href="">Professional Software Training </a></li>
-              </ul>
-            </li>
-            <li><a href="javascript:void(0)">Computer Sales & accessories</a>
-              <ul>
-                <li><a href="#"> Laptops </a></li>
-                <li><a href="#">Computer Accessories</a></li>
-                <li><a href="#"> Office Equipment </a></li>
-              </ul>
-            </li>
-            <li><a href="javascript:void(0)">Computer repairs & maintenance</a>
-              <ul>
-                <li><a href="#">Diagnosis and Repair</a></li>
-                <li><a href="#">Expertise Across Brands</a></li>
-                <li><a href="#">Data Recovery</a></li>
-              </ul>
-            </li>
-            <li><a href="#">CCTV equipment & installation</a></li>
-          </ul>
-        </li>
-        <li><a href="#">contact</a></li>
-      </ul>
     </div>
-  </nav>
+    <ul>
+      <li><a href="index.html" class="activeLink links">Home</a></li>
+      <li class="dropdownBig"><a href="javascript:void(0)" class="links" id="links">Services <i
+            class="fa fa-chevron-down" id="toggleDown"></i></a>
+        <ul class="dropList" id="dropList">
+          <li class="dropItems">ICT Training
+            <ul class="insideDrop">
+              <li><a href="#">Basic Software Training</a></li>
+              <li><a href="#">Professional Software Training</a></li>
+            </ul>
+          </li>
+          <li class="dropItems">Computer Sales & accessories
+            <ul class="insideDrop">
+              <li><a href="#">Laptops</a></li>
+              <li><a href="#">Computer Accessories</a></li>
+              <li><a href="#">Office Equipment</a></li>
+            </ul>
+          </li>
+          <li class="dropItems">Computer repairs & maintenance
+            <ul class="insideDrop">
+              <li><a href="#"> Expertise Across Brands</a></li>
+              <li><a href="#">Data Recovery</a></li>
+            </ul>
+          </li>
+          <li class="dropItems"><a href="#">CCTV equipment & installation</a></li>
+        </ul>
+      </li>
+      <li><a href="About.html" class="links">About Us</a></li>
 
-  <div class="mainBox">
+      <!-- <li><a href="# " class="links">Contact Us</a></li> -->
+    </ul>
+  </div>
+  <!-- navSmallScreen -->
+  <header class="navHeader" id="smallscreenNav">
+    <nav class="nav navContainer">
+      <div class="navData">
+        <a href="index.html" class="navLogo">
+
+          <img src="Assets/image/png-2.png" alt="logo" class="smallScreenImg" />
+        </a>
+        <div class="navToggle" id="navToggle">
+          <i class="fa fa-bars navBurger" id="hamburger"></i>
+        </div>
+      </div>
+      <div class="navMenu" id="navMenu">
+        <ul class="navList">
+          <li><a href="index.html" class="navLink">Home</a></li>
+          <li class="dropDownItem">
+            <div class="navLink">
+              Services <i class="fa fa-chevron-down dropDownArrow"></i>
+            </div>
+
+            <ul class="dropDownMenu">
+              <li class="dropDownSubItem">
+                <div href="#" class="dropDownLink">ICT Training <i class="fa fa-add dropDownAdd"></i></div>
+
+                <ul class="dropDownSubMenu">
+                  <li>
+                    <a href="#" class="dropDownSubLink">
+                      Basic Software Training
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropDownSubLink">
+                      Professional Software Training
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropDownSubItem">
+                <div href="#" class="dropDownLink">Computer Sales & accessories <i class="fa fa-add dropDownAdd"></i>
+                </div>
+
+                <ul class="dropDownSubMenu">
+                  <li>
+                    <a href="#" class="dropDownSubLink">
+                      Laptops
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropDownSubLink">
+                      Computer Accessories
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropDownSubLink">
+                      Office Equipment
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropDownSubItem">
+                <div href="#" class="dropDownLink">Computer repairs & maintenance <i class="fa fa-add dropDownAdd"></i>
+                </div>
+                <ul class="dropDownSubMenu">
+                  <li>
+                    <a href="#" class="dropDownSubLink">
+                      Expertise Across Brands
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropDownSubLink">
+                      Data Recovery
+                    </a>
+                  </li>
+
+                </ul>
+              </li>
+              <li>
+                <a href="#" class="dropDownLink">CCTV equipment & installation</a>
+              </li>
+            </ul>
+
+          </li>
+          <li><a href="About.html" class="navLink">About Us</a></li>
+
+          <!-- <li><a href="#" class="navLink">Contact Us</a></li> -->
+
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+
+  <div class="mainBox ">
     <div class="content">
-      <p>Start Your Tech Career With Infinity Tech-World</p>
-      <h2>We are Empowering Tomorrow's Innovators Today </h2>
-      <p>
+      <p class="revealSub">Start Your Tech Career With Infinity Tech-World</p>
+      <h2 class="revealHeading">We are Empowering <span> Tomorrow's Innovators</span> Today </h2>
+      <p class="revealSub">
         with cutting-edge IT skills, fostering innovation, economic growth, and technological adoption on the continent.
       </p>
     </div>
 
-    <div class="contentGrid">
-      <div class="gridBox">
-        <video src="" controls></video>
-      </div>
-      <div class="gridBox">
-        <img src="Assets/image/next.png" alt="" />
-      </div>
-      <div class="gridBox">
-        <img src="Assets/image/next.png" alt="" />
-      </div>
-      <div class="gridBox">
-        <img src="Assets/image/next.png" alt="" />
-      </div>
-      <div class="gridBox">
-        <img src="Assets/image/next.png" alt="" />
-      </div>
-      <div class="gridBox">
-        <video src="" controls></video>
-      </div>
-    </div>
+
   </div>
 
   <!-- who we are -->
-  <div class="weBox">
+  <div class="weBox bottomSpace">
     <div class="weContent">
       <h2>Who we are</h2>
       <p>
@@ -112,7 +182,7 @@
 
   <!-- what we do -->
 
-  <div class="weDo">
+  <div class="weDo bottomSpace">
     <h2>Empowering You Through Knowledge</h2>
     <p>
       we believe that knowledge is power, especially in today's digital world. Our comprehensive ICT training programs
@@ -123,13 +193,13 @@
 
     </p>
     <div class="weDoGrid">
-      <div class="box">
+      <div class="box wedoBox">
         <img src="Assets/image/work.png" alt="" />
       </div>
-      <div class="box">
+      <div class="box wedoBox">
         <img src="Assets/image/next.png" alt="" />
       </div>
-      <div class="box">
+      <div class="box wedoBox">
         <img src="Assets/image/wow.png" alt="" />
       </div>
     </div>
@@ -137,11 +207,11 @@
 
   <!-- our courses -->
 
-  <div class="courses">
+  <div class="courses bottomSpace">
     <h2>Explore our diverse tech courses</h2>
 
     <div class="courseGrid">
-      <div class="box">
+      <div class="box courseBox">
         <div class="imgBox">
           <img src="Assets/image/basics.jfif" alt="" />
         </div>
@@ -159,7 +229,7 @@
           <a href="javascript:void(0)" class="btn">see more <i class="fa fa-arrow-right"></i></a>
         </div>
       </div>
-      <div class="box">
+      <div class="box courseBox">
         <div class="imgBox">
           <img src="Assets/image/software.jfif" alt="" />
         </div>
@@ -177,7 +247,7 @@
           <a href="javascript:void(0)" class="btn">see more <i class="fa fa-arrow-right"></i></a>
         </div>
       </div>
-      <div class="box">
+      <div class="box courseBox">
         <div class="imgBox">
           <img src="Assets/image/ui ux.jfif" alt="" />
         </div>
@@ -195,7 +265,7 @@
           <a href="javascript:void(0)" class="btn">see more <i class="fa fa-arrow-right"></i></a>
         </div>
       </div>
-      <div class="box">
+      <div class="box courseBox">
         <div class="imgBox">
           <img src="Assets/image/cyber security.jfif" alt="" />
         </div>
@@ -213,7 +283,7 @@
           <a href="javascript:void(0)" class="btn">see more <i class="fa fa-arrow-right"></i></a>
         </div>
       </div>
-      <div class="box">
+      <div class="box courseBox">
         <div class="imgBox">
           <img src="Assets/image/web development.jfif" alt="" />
         </div>
@@ -231,7 +301,7 @@
           <a href="javascript:void(0)" class="btn">see more <i class="fa fa-arrow-right"></i></a>
         </div>
       </div>
-      <div class="box">
+      <div class="box courseBox">
         <div class="imgBox">
           <img src="Assets/image/data analysis.jfif" alt="" />
         </div>
@@ -261,10 +331,11 @@
   <div class="testimonial">
     <div class="header">
       <h2>Testimonials</h2>
-      <p>
-        People love what we do and they only have positive things to say about
+      <p> People love what we do and they only have positive things to say about
         us
       </p>
+
+
     </div>
 
     <div class="comments">
@@ -274,7 +345,7 @@
         </div>
         <div class="details">
           <div class="comment-body">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis,
+            <i class="fa-solid fa-quote-left"></i> Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis,
             nulla.
           </div>
           <div class="name">Jane Matilda</div>
@@ -286,7 +357,7 @@
         </div>
         <div class="details">
           <div class="comment-body">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam
+            <i class="fa-solid fa-quote-left"></i> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam
             sit doloribus assumenda. Perferendis, excepturi?
           </div>
           <div class="name">Okoye kingsley</div>
@@ -298,7 +369,7 @@
         </div>
         <div class="details">
           <div class="comment-body">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ad
+            <i class="fa-solid fa-quote-left"></i> Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ad
             reprehenderit natus.
           </div>
           <div class="name">jachima dike</div>
@@ -310,7 +381,7 @@
         </div>
         <div class="details">
           <div class="comment-body">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo,
+            <i class="fa-solid fa-quote-left"></i> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo,
             officia.
           </div>
           <div class="name">nkiru livinus</div>
@@ -322,7 +393,7 @@
         </div>
         <div class="details">
           <div class="comment-body">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla hic
+            <i class="fa-solid fa-quote-left"></i> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla hic
             repellat nesciunt, quo aut ipsum optio quidem accusamus omnis
             repudiandae?
           </div>
@@ -335,86 +406,91 @@
   <!-- footer -->
 
   <footer class="footer">
-   
-   <div class="gridContainer">
-    <div class="boxItem item1">
-      <div class="heading">
-        <div class="logo">
-          <a href="#">
-            <img src="Assets/image/logo.png" alt="logo" height="40px">
-          </a>
-        </div>
-      </div>
-      <div class="content">
-        <p>
-          We are Infinity Tech-World, a team of dedicated professionals committed to delivering creative software solutions with
-          unwavering efficiency.
-        </p>
 
-        <div class="socials">
-          <div class="iconBox">
-            <a href="https://instagram.com/infinitytechworld.com"> <i class="fab fa-instagram"
-              target="_blank"></i></a>
-          </div>
-          <div class="iconBox">
-            <a href="http://www.facebook.com/InfinityTechWorldltd" target="_blank"> <i class="fab fa-facebook"></i></a>
-          </div>
-          <div class="iconBox">
-            <a href="http://www.twitter.com/infinitytechW"> <i class="fab fa-twitter" target="_blank"></i></a>
-          </div>
-          <div class="iconBox">
-            <a href="http://www.youtube.com/results?search_query=infinity+tech+world" target="_blank"> <i
-              class="fab fa-youtube"></i></a>
+    <div class="gridContainer">
+      <div class="boxItem item1">
+        <div class="heading">
+          <div class="logo">
+            <a href="#">
+              <img src="Assets/image/logo.png" alt="logo" height="40px">
+            </a>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="boxItem item2">
-      <div class="heading">
-        <h3>useful links</h3>
-      </div>
-      <div class="content">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="About.html">about us</a></li>
-          <li><a href="#">contact</a></li>
+        <div class="content">
+          <p>
+            We are Infinity Tech-World, a team of dedicated professionals committed to delivering creative software
+            solutions with
+            unwavering efficiency.
+          </p>
 
-        </ul>
+          <div class="socials">
+            <div class="iconBox">
+              <a href="https://instagram.com/infinitytechworld.com"> <i class="fab fa-instagram"
+                  target="_blank"></i></a>
+            </div>
+            <div class="iconBox">
+              <a href="http://www.facebook.com/InfinityTechWorldltd" target="_blank"> <i
+                  class="fab fa-facebook"></i></a>
+            </div>
+            <div class="iconBox">
+              <a href="http://www.twitter.com/infinitytechW"> <i class="fab fa-twitter" target="_blank"></i></a>
+            </div>
+            <div class="iconBox">
+              <a href="http://www.youtube.com/results?search_query=infinity+tech+world" target="_blank"> <i
+                  class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="boxItem item2">
+        <div class="heading">
+          <h3>useful links</h3>
+        </div>
+        <div class="content">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">about us</a></li>
+            <li><a href="#">contact</a></li>
+
+          </ul>
+        </div>
+      </div>
+      <div class="boxItem item3">
+        <div class="heading">
+          <h3>our services</h3>
+        </div>
+        <div class="content">
+          <ul>
+            <li><a href="#">ICT Training</a></li>
+            <li><a href="#">Computer Sales & accessories</a></li>
+            <li><a href="#">Computer repairs & maintenance</a></li>
+            <li><a href="#">CCTV equipment & installation</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="boxItem item4">
+        <div class="heading">
+          <h3>contact information</h3>
+        </div>
+        <div class="content">
+          <ul>
+            <li><i class="fa fa-phone-volume"></i>+234 802 960 4117</li>
+            <li> <i class="fa fa-phone-volume"></i>+234 8064 380 018</li>
+            <li class="email"><i class="fa fa-envelope"></i><a href="mailto:infinitytechworldofficial@gmail.com"
+                target="_blank">infinitytechworldofficial@gmail.com</a></li>
+
+            <li><i class="fa fa-location-dot"></i>No 1 Secretariat Rd, Aroma Junction Awka Anambra state (Head Office)
+            </li>
+            <li><i class="fa fa-location-dot"></i>No 119 Ziks Avenue Opp. Dike Park Awka (Branch Office)</li>
+            <li></li>
+          </ul>
+        </div>
       </div>
     </div>
-    <div class="boxItem item3">
-      <div class="heading">
-        <h3>our services</h3>
-      </div>
-      <div class="content">
-        <ul>
-          <li><a href="#">ICT Training</a></li>
-          <li><a href="#">Computer Sales & accessories</a></li>
-          <li><a href="#">Computer repairs & maintenance</a></li>
-          <li><a href="#">CCTV equipment & installation</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="boxItem item4">
-      <div class="heading">
-        <h3>contact information</h3>
-      </div>
-      <div class="content">
-        <ul>
-          <li><i class="fa fa-phone-volume"></i>+234 802 960 4117</li>
-          <li> <i class="fa fa-phone-volume"></i>+234 8064 380 018</li>
-          <li class="email"><i class="fa fa-envelope"></i><a href="mailto:infinitytechworldofficial@gmail.com"
-            target="_blank">infinitytechworldofficial@gmail.com</a></li>
-          
-          <li><i class="fa fa-location-dot"></i>No 1 Secretariat Rd, Aroma Junction Awka Anambra state (Head Office)</li>
-          <li><i class="fa fa-location-dot"></i>No 119 Ziks Avenue Opp. Dike Park Awka (Branch Office)</li>
-          <li></li>
-        </ul>
-      </div>
-    </div>
-   </div>
     <div class="allRights">
-      <p>&copy Copyrights <span><script>document.write( new Date().getFullYear() );</script></span> infinity-techworld All rights reserved.</p>
+      <p>&copy Copyrights <span>
+          <script>document.write(new Date().getFullYear());</script>
+        </span> infinity-techworld All rights reserved.</p>
     </div>
   </footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"

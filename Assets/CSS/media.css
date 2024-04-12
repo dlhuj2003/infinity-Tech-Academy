@@ -1,5 +1,12 @@
 /* small screen media query */
-
+@media screen and (width <= 340px) {
+  .container {
+    margin-inline: 1rem;
+  }
+  .navLink {
+    padding-inline: 1rem;
+  }
+}
 @media screen and (width <= 355px) {
   .courses {
     padding: 40px 10px;
@@ -17,13 +24,25 @@
       }
     }
   }
-  .footer {
-    .gridContainer {
-      padding: 5px;
-    }
-  }
 }
 @media screen and (width <=400px) {
+  .newNav {
+    background: #eee;
+    height: 100px;
+  }
+}
+
+@media screen and (width <= 450px) {
+  .mainBox {
+    .contentGrid {
+      grid-template-columns: 1fr;
+    }
+  }
+  .thumbNail {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   .mainBox {
     .content {
       text-align: start;
@@ -40,7 +59,7 @@
     .weContent {
       text-align: start;
       justify-content: center;
-      & p{
+      & p {
         font-size: 18px;
       }
     }
@@ -51,6 +70,7 @@
   .weDo {
     & h2 {
       text-align: start;
+      width: 100%;
     }
     & p {
       text-align: start;
@@ -70,36 +90,17 @@
       }
     }
   }
-}
-
-@media screen and (width <= 450px) {
-  .mainBox {
-    .contentGrid {
-      grid-template-columns: 1fr;
-    }
-  }
-  .thumbNail {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .testimonial {
-    .header {
-      & h2 {
-        width: 90%;
+  .footer {
+    .gridContainer {
+      padding: 5px;
+      .content {
+        padding: 10px;
       }
     }
   }
 }
 
 @media screen and (width <=500px) {
-  .navBar {
-    .smallScreenImg {
-      display: block;
-    }
-    .bigScreenImg {
-      display: none;
-    }
-  }
   .slider {
     margin-bottom: 30px;
     .list {
@@ -149,6 +150,19 @@
   .valuesHeader {
     padding: 0 15px;
   }
+  .testimonial{
+    .comments{
+      .comment{
+        .details{
+          .comment-body{
+            & i{
+              font-size: 25px;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 @media screen and (width >= 500px) {
   .weBox {
@@ -181,9 +195,11 @@
     }
     .comments {
       height: 125vh;
+     
+      overflow: hidden;
       .comment {
         grid-template-columns: 1fr;
-        height: 20rem;
+       
       }
     }
   }
@@ -228,58 +244,159 @@
   }
 }
 
-@media screen and (width <= 750px) {
-  .navBar {
-    .navLinks {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      /* height: 50vh; */
+@media screen and (width >= 750px) {
+  .bigscreenNav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 90px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 7%;
+    width: 100%;
+    background: #f2f5f7;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: 0.5s linear;
+    & ul {
+      display: flex;
+      align-items: center;
+      gap: 20px;
 
-      background: #1b1a59;
-      height: 0;
-      overflow: hidden;
-
-      pointer-events: none;
-      transition: height 0.5s ease-in-out;
-
-      & ul {
-        padding: 30px 0;
-        & li {
-          width: 100%;
-          & a {
-            color: #fff;
+      & li {
+        position: relative;
+        .links {
+          color: #333;
+          font-size: 20px;
+          padding: 20px;
+          color: #333;
+          display: block;
+          text-transform: capitalize;
+          transition: 0.3s ease;
+          &:hover {
+            color: #f7941d;
+            transition: 0.3s ease;
           }
+        }
+        &:hover .dropList,
+        &:focus-within .dropList
+         {
+          opacity: 1;
+          pointer-events: initial;
+          top: 4rem;
+          transition: top 0.4s, opacity 0.3s;
+        }
+        .fa {
+          transition: transform 0.3s ease-in-out;
+          margin-left: 5px;
+          font-size: 16px;
+        }
+        &:hover .fa {
+          transform: rotate(180deg);
+          transition: transform 0.3s ease-in-out;
+        }
+      }
+      .dropdownBig {
+        position: relative;
+        align-items: center;
+      }
+      .dropdownBig .dropList {
+        pointer-events: none;
+        opacity: 0;
+        position: absolute;
+        top: 3rem;
+        left: 50%;
+        transform: translateX(-50%);
+        right: 0;
+        display: grid;
+        place-items: center;
+        background: #f2f5f7;
+        transition: top 0.4s, opacity 0.3s;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 
-          & ul {
-            position: relative;
+        width: 300px;
+      }
+      .dropdownBig .dropList .dropItems {
+        padding: 10px 15px;
+        width: 100%;
+        display: flex;
+
+        cursor: pointer;
+        font-size: 18px;
+        transition: 0.3s linear;
+
+        &:hover {
+          background: #e4f3fd;
+          transition: 0.3s linear;
+        }
+        & a {
+          color: #333;
+        }
+        &:first-child {
+          padding-top: 15px;
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+        &:hover .insideDrop,
+        &:focus-within .insideDrop {
+          opacity: 1;
+          /* top: 1rem; */
+          pointer-events: initial;
+          overflow: initial;
+          transition: top 0.4s, opacity 0.3s;
+        }
+        .insideDrop {
+          position: absolute;
+          left: -100%;
+          right: 0;
+          top: 0;
+          background: #f2f2f2;
+          display: grid;
+          place-items: center;
+          width: 100%;
+          height: initial;
+          opacity: 0;
+          pointer-events: none;
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+          transition: top 0.4s, opacity 0.3s;
+
+          & li {
             width: 100%;
-            z-index: 1000;
-            left: 0;
-            transform: translateX(0);
-            & li {
-              background: #fff;
-
-              & a {
-                color: #000;
-              }
+            padding: 10px 15px;
+            transition: 0.3s linear;
+            &:hover {
+              background: #e4f3fd;
+              transition: 0.3s linear;
             }
           }
         }
       }
     }
-    .label {
-      display: initial;
-    }
-    #hamburgerMenu:checked ~ .navLinks {
-      height: 100vh;
-      overflow: auto;
-      pointer-events: initial;
-      transition: height 0.5s ease-in-out;
+    .activeLink {
+      font-weight: 600;
     }
   }
 }
+.newNav {
+  height: 120px;
+  transition: height 0.5s, background 0.5s padding 0.5s linear;
+  background: #fff;
+
+  padding: 10px 3%;
+  & ul {
+    & li a {
+      color: #121212;
+
+      &:hover {
+        color: #f7941d;
+        transition: 0.3s ease;
+      }
+    }
+  }
+}
+
 @media screen and (width >= 800px) {
   .values {
     display: grid;
@@ -317,40 +434,53 @@
 }
 
 @media screen and (width <= 900px) {
-  .navBar {
-    padding: 20px;
-    .bigScreenImg {
-      height: 40px;
+  #bigscreenNav {
+    display: none;
+  }
+  .navMenu {
+    position: absolute;
+    left: 0;
+    top: 2.5rem;
+    width: 100%;
+    background: #eee;
+    height: calc(100vh - 3.5rem);
+    overflow: auto;
+    pointer-events: none;
+    opacity: 0;
+    transition: top 0.4s, opacity 0.3s;
+    &::-webkit-scrollbar {
+      width: 0;
     }
-    .navLinks {
-      & ul {
-        & li {
-          & ul {
-            margin: auto;
-            width: 700px;
+    .navList {
+      background-color: #1b1a59;
+      padding-top: 1rem;
 
-            & li {
-              & a {
-                color: #000;
-              }
-              & ul {
-                position: relative;
-                left: 0;
-                & li {
-                  background: #f2f5f7;
-                  width: 100%;
-                  & a {
-                    color: #fff;
-                  }
-                }
-              }
-              &:hover > ul {
-                animation: none;
-              }
-            }
-          }
+      .navLink {
+        color: #fff;
+        background-color: #1b1a59;
+        font-weight: 400;
+        padding: 1.25rem 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        transition: background-color 0.3s;
+        &:hover {
+          background-color: #eee4;
         }
       }
+    }
+  }
+
+  .showMenu {
+    opacity: 1;
+    top: 5.5rem;
+    pointer-events: initial;
+  }
+
+  .navHeader {
+    .bigScreenImg {
+      height: 40px;
     }
   }
 
@@ -371,6 +501,15 @@
 }
 
 @media screen and (width >= 901px) {
+  #smallscreenNav {
+    display: none;
+  }
+  .navMenu {
+    display: none;
+  }
+  .navToggle {
+    display: none;
+  }
   .courses {
     .courseGrid {
       grid-template-columns: repeat(3, 1fr);
@@ -418,6 +557,12 @@
   }
 }
 @media screen and (width <= 1080px) {
+  .bigscreenNav {
+    padding: 10px 4%;
+    & ul {
+      gap: 10px;
+    }
+  }
   .courses {
     padding: 70px 30px;
   }
@@ -519,20 +664,13 @@
 @media screen and (width >= 1310px) {
   .mainBox {
     .content {
-      height: 75vh;
+      height: 100vh;
 
       & h2 {
         font-size: 40px;
       }
       & p {
         font-size: 25px;
-      }
-    }
-    .contentGrid {
-      width: 80%;
-      top: 40%;
-      .gridBox {
-        height: 20rem;
       }
     }
   }

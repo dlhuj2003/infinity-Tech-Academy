@@ -1,14 +1,45 @@
+// scroll reveal
+ScrollReveal({
+  reset: true,
+  distance: "60px",
+  duration: 2500,
+  delay: 400,
+});
+ScrollReveal().reveal(".revealHeading", { delay: 500, origin: "left" });
+ScrollReveal().reveal(".revealSub", { delay: 600, origin: "bottom" });
+
+ScrollReveal().reveal(".wedoBox", {
+  delay: 600,
+  origin: "left",
+  interval: 200,
+});
+ScrollReveal().reveal(".courseBox", {
+  delay: 600,
+  origin: "right",
+  interval: 200,
+});
+ScrollReveal().reveal(".valueItem", {
+  delay: 600,
+  origin: "bottom",
+  interval: 200,
+});
 // navbar toggle mode
 window.addEventListener("scroll", () => {
-  let nav = document.querySelector(".navBar");
-  nav.classList.toggle("newNav", window.scrollY > 500); 
+  let nav = document.querySelector("#bigscreenNav");
+  nav.classList.toggle("newNav", window.scrollY > 500);
 });
-// menu toggle
-let menuOpen = document.getElementById("menuOpen");
 
-function openNav() {
-  menuOpen.classList.toggle("fa-times");
-}
+const ShowNav = (toggleId, navId) => {
+  const toggle = document.getElementById(toggleId);
+  nav = document.getElementById(navId);
+  toggle.addEventListener("click", () => {
+    nav.classList.toggle("showMenu");
+    hamburger = document.getElementById("hamburger");
+    hamburger.classList.toggle("fa-times");
+  });
+};
+ShowNav("navToggle", "navMenu");
+
 // about page slider
 let items = document.querySelectorAll(".slider .list .item");
 let thumnails = document.querySelectorAll(".thumbNail .item");
