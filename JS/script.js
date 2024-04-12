@@ -5,8 +5,8 @@ ScrollReveal({
   duration: 2500,
   delay: 0,
 });
-ScrollReveal().reveal(".revealHeading", { delay: 800, origin: "left" });
-ScrollReveal().reveal(".revealSub", { delay: 900, origin: "bottom" });
+// ScrollReveal().reveal(".revealHeading", { delay: 800, origin: "left" });
+// ScrollReveal().reveal(".revealSub", { delay: 900, origin: "bottom" });
 
 ScrollReveal().reveal(".wedoBox", {
   delay: 600,

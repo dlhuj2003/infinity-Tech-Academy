@@ -130,7 +130,6 @@ body {
   flex-direction: column;
   gap: 20px;
   overflow: hidden;
- 
 
   .content {
     display: flex;
@@ -140,14 +139,13 @@ body {
     height: 100vh;
     text-align: center;
     padding: 20px 20px 0 20px;
-    background-image:  url(../image/college-students-different-ethnicities-cramming\ 1.png);
+    background-image: url(../image/college-students-different-ethnicities-cramming\ 1.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     animation: changeBackground 20s infinite ease-in-out;
     animation-fill-mode: forwards;
     animation-direction: alternate;
-     
 
     & h2 {
       font-size: 25px;
@@ -156,6 +154,7 @@ body {
       font-weight: 500;
       font-family: "Montserrat", sans-serif;
       z-index: 0;
+      animation: dropIn .5s .7s ease-in-out forwards;
 
       & span {
         color: #e4f3fd;
@@ -168,30 +167,74 @@ body {
       font-size: 17px;
       color: #fff;
       margin-bottom: 10px;
+      
+      &:first-child{
+        animation: fadeInLeft .5s .3s ease-in-out forwards;
+      }
+      &:last-child{
+        animation: fadeInRight .5s .5s ease-in-out forwards;
+        animation-delay: .4s;
+      }
     }
+
+  }
+}
+@keyframes fadeInLeft{
+  0%{
+    opacity: 0;
+    transform: translateX(-100px) ;
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+@keyframes fadeInRight{
+  0%{
+    opacity: 0;
+    transform: translateX(100px) ;
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+@keyframes dropIn{
+  0%{
+    opacity: 0;
+    transform: translateY(100px) ;
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
 @keyframes changeBackground {
   0% {
-    background-image:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),  url(../image/students1.avif);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)),
+      url(../image/students1.avif);
   }
   20% {
-    background-image:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),  url(../image/students2.avif);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)),
+      url(../image/students2.avif);
   }
   40% {
-    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url(../image/students3.avif);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)),
+      url(../image/students3.avif);
   }
 
   60% {
-    background-image:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),  url(../image/students4.avif);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)),
+      url(../image/students4.avif);
   }
 
   80% {
-    background-image:url(../image/college-students-different-ethnicities-cramming\ 1.png);
+    background-image: url(../image/college-students-different-ethnicities-cramming\ 1.png);
   }
   100% {
-    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),   url(../image/students1.avif);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)),
+      url(../image/students1.avif);
   }
 }
 
