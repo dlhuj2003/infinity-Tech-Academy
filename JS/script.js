@@ -1,12 +1,12 @@
 // scroll reveal
 ScrollReveal({
   reset: true,
-  distance: "60px",
+  distance: "80px",
   duration: 2500,
-  delay: 400,
+  delay: 0,
 });
-ScrollReveal().reveal(".revealHeading", { delay: 500, origin: "left" });
-ScrollReveal().reveal(".revealSub", { delay: 600, origin: "bottom" });
+ScrollReveal().reveal(".revealHeading", { delay: 800, origin: "left" });
+ScrollReveal().reveal(".revealSub", { delay: 900, origin: "bottom" });
 
 ScrollReveal().reveal(".wedoBox", {
   delay: 600,
